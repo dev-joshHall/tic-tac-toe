@@ -2,7 +2,7 @@ import React from "react";
 
 const Title = () => {
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ maxWidth: "100%", height: "auto" }}>
       <h1
         className="h1 border rounded-bottom title shadow"
         style={{ textAlign: "center" }}
