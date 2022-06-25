@@ -2,7 +2,7 @@ import React from "react";
 
 const Title = () => {
   return (
-    <React.Fragment>
+    <div style={{ width: "100%" }}>
       <h1
         className="h1 border rounded-bottom title shadow"
         style={{ textAlign: "center" }}
@@ -24,7 +24,7 @@ const Title = () => {
           className="m-3 rotate"
         />
       </h1>
-    </React.Fragment>
+    </div>
   );
 };
 
