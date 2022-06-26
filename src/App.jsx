@@ -38,6 +38,12 @@ class App extends Component {
   };
 
   playMove = (squareKey) => {
+    for (const btn of this.state.buttons) {
+      if (btn.key === squareKey && btn.val !== " ") {
+        return; // stop illegal move on filled square
+      }
+    }
+
     console.log("Playing " + this.state.turn + " for square " + squareKey);
     let buttons = [...this.state.buttons];
     buttons = buttons.map((x) => {
@@ -66,6 +72,7 @@ class App extends Component {
         ) {
           console.log(sym + "'s won!");
           this.setState({ winner: sym });
+          return;
         }
       }
       // check for vertical wins
@@ -77,17 +84,32 @@ class App extends Component {
         ) {
           console.log(sym + "'s won!");
           this.setState({ winner: sym });
+          return;
         }
       }
       // check for diagonal wins
       if (btnVals[0] === sym && btnVals[4] === sym && btnVals[8] === sym) {
         console.log(sym + "'s won!");
         this.setState({ winner: sym });
+        return;
       }
       if (btnVals[2] === sym && btnVals[4] === sym && btnVals[6] === sym) {
         console.log(sym + "'s won!");
         this.setState({ winner: sym });
+        return;
       }
+    }
+    // check for cat's game
+    let filledSquares = 0;
+    for (const val of btnVals) {
+      if (val === "X" || val === "O") {
+        filledSquares++;
+      }
+    }
+    if (filledSquares === 9) {
+      console.log("cat's game");
+      this.setState({ winner: "Cat" });
+      return;
     }
   };
 }
