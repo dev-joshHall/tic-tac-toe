@@ -13,7 +13,7 @@ const Title = () => {
           className="m-3 rotate"
         />
         <span
-          className="m-5"
+          className="m-4"
           style={{ fontFamily: "Impact, fantasy", color: "white" }}
         >
           Tic-Tac-Toe
