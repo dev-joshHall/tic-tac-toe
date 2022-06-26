@@ -4,6 +4,12 @@ import Square from "./square";
 const Board = (props) => {
   return (
     <div className="board border rounded m-6 shadow">
+      <span
+        class="badge border bg-light m-3 py-2"
+        style={{ fontFamily: "Arial Black", fontSize: "20px", width: "8em" }}
+      >
+        {props.winner ? `${props.winner}'s Win!!` : `${props.turn}'s Turn`}
+      </span>
       <br />
       {props.buttons.map((x) => {
         if (x.key < 4) {

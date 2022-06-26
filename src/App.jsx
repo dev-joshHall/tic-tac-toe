@@ -17,6 +17,7 @@ class App extends Component {
       <React.Fragment>
         <Title />
         <Board
+          turn={this.state.turn}
           winner={this.state.winner}
           buttons={this.state.buttons}
           onPlayMove={this.playMove}
