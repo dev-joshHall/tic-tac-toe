@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# View the Site on the Web
+
+[View the site here](https://dev-joshhall.github.io/tic-tac-toe/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
